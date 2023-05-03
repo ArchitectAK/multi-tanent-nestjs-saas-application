@@ -7,11 +7,11 @@ async function bootstrap() {
   app.connectMicroservice<MicroserviceOptions>({
     transport: Transport.REDIS,
     options: {
-      url: 'redis://127.0.0.1:6379',
+      url: 'redis://localhost:6379',
     },
   });
 
   await app.startAllMicroservices();
-  await app.listen(3003);
+  await app.listen(3002);
 }
 bootstrap();
