@@ -8,11 +8,11 @@ export class NotificationController {
 
   @MessagePattern('notify')
   async notify(data: NotifiyData) {
-    console.log('send');
+    console.log('AK', 'send');
     Logger.log('notificatoin data' + data.user);
     const a: number = data.data['a'];
     const b: number = data.data['b'];
-    console.log(a, b);
+    console.log('AK', a, b);
     return a + b;
   }
 
